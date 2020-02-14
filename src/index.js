@@ -1,10 +1,11 @@
 import { readFile } from 'fs'
-import { setDictionary } from './setDictionary/setDictionary'
+// import { setDictionary } from './setDictionary/setDictionary'
+import { treeDictionary } from './treeDictionary/treeDictionary'
 
 readFile('words.txt', 'utf8', function (err, contents) {
   if (err) console.log(err)
   const items = contents.split('\n').filter(x => !!x)
-  const lookup = setDictionary(items)
+  const lookup = treeDictionary(items)
 
   console.log(lookup('zoetrope'))
   console.log(lookup('nugget'))
