@@ -1,0 +1,27 @@
+{
+  "name": "dictionary-playground",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node lib/index.js",
+    "test": "./node_modules/.bin/jest  ./src --runInBand --verbose=false",
+    "build": "./node_modules/.bin/babel src -d lib"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest"
+    }
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.7.4",
+    "@babel/core": "^7.0.0",
+    "@babel/plugin-transform-modules-commonjs": "^7.7.4",
+    "@babel/preset-env": "^7.7.4",
+    "babel-jest": "^24.9.0",
+    "jest": "^24.9.0"
+  }
+}
